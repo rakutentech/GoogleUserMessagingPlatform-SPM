@@ -5,11 +5,14 @@ import PackageDescription
 
 let package = Package(
     name: "GoogleUserMessagingPlatform-SPM",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "GoogleUserMessagingPlatform-SPM",
-            targets: ["GoogleUserMessagingPlatform-SPM"]),
+            name: "UserMessagingPlatform",
+            targets: ["UserMessagingPlatform"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -18,11 +21,11 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "GoogleUserMessagingPlatform-SPM",
-            dependencies: []),
-        .testTarget(
-            name: "GoogleUserMessagingPlatform-SPMTests",
-            dependencies: ["GoogleUserMessagingPlatform-SPM"]),
+        .binaryTarget(
+            name: "UserMessagingPlatform",
+            path: "Sources/UserMessagingPlatform.xcframework"),
+//        .binaryTarget(name: "UserMessagingPlatform",
+//                      url: "",
+//                      checksum: ""),
     ]
 )
