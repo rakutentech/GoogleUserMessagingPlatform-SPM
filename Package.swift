@@ -11,23 +11,23 @@ let package = Package(
     products: [
         .library(
             name: "UserMessagingPlatform",
-            targets: ["UserMessagingPlatform"]),
+            targets: ["UserMessagingPlatformTarget"]),
     ],
     dependencies: [
     ],
     targets: [
-        .target(name: "UserMessagingPlatform",
+        .target(name: "UserMessagingPlatformTarget",
                 dependencies: [
-                    .target(name: "UserMessagingPlatformBinary")
+                    .target(name: "UserMessagingPlatform")
                 ],
                 path: "Sources/dummy",
                 linkerSettings: [
                     .linkedFramework("WebKit")
                 ]),
         .binaryTarget(
-            name: "UserMessagingPlatformBinary",
+            name: "UserMessagingPlatform",
             path: "Sources/UserMessagingPlatform.xcframework"),
-//        .binaryTarget(name: "UserMessagingPlatformBinary",
+//        .binaryTarget(name: "UserMessagingPlatform",
 //                      url: "",
 //                      checksum: ""),
     ]
