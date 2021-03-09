@@ -20,7 +20,7 @@ let package = Package(
                 dependencies: [
                     .target(name: "UserMessagingPlatform")
                 ],
-                path: "Sources/dummy",
+                path: "Sources",
                 linkerSettings: [
                     .linkedFramework("WebKit")
                 ]),
