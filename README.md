@@ -1,8 +1,7 @@
-# Unofficial Swift Package for GoogleUserMessagingPlatform
-
-Currently Google doesn't provide GoogleUserMessagingPlatform as Swift package.  
-This repository is alternate for using that as Swift package.  
-For security reasons, I hope that Google will officially provide the package.
+# Unofficial Swift Package for GoogleUserMessagingPlatform (deprecated)
+Google has released an official package.  
+Use the official package instead of this package.  
+https://github.com/googleads/swift-package-manager-google-user-messaging-platform
 
 ## Workaround for Xcode 12.0...12.4
 
